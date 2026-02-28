@@ -1,28 +1,29 @@
 "use client"
 
 import { Navigation } from "@/components/navigation"
+import { CustomCursor } from "@/components/custom-cursor"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Hero } from "@/components/hero"
 import { SelectedWorks } from "@/components/selected-works"
-// import { Experience } from "@/components/experience"
-// import { About } from "@/components/about"
-// import { Education } from "@/components/education"
-// import { Contact } from "@/components/contact"
+import { Experience } from "@/components/experience"
+import { About } from "@/components/about"
+import { Education } from "@/components/education"
+import { Contact } from "@/components/contact"
 import { MarqueeFooter } from "@/components/marquee-footer"
 
 export default function Home() {
   return (
     <>
       <SmoothScroll />
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <Navigation />
       <main>
         <Hero />
         <SelectedWorks />
-        {/* <Experience />
+        <Experience />
         <About />
         <Education />
-        <Contact /> */}
+        <Contact />
       </main>
       <MarqueeFooter />
     </>

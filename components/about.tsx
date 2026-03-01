@@ -47,14 +47,14 @@ export function About() {
                 <div 
                   className="relative flex aspect-[3/4] w-full items-center justify-center overflow-hidden bg-secondary"
                   style={{
-                    background: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)",
+                    background: "linear-gradient(135deg, var(--card) 0%, var(--background) 100%)",
                   }}
                 >
                   {/* Pattern Overlay */}
                   <div 
                     className="absolute inset-0 mix-blend-overlay opacity-30"
                     style={{
-                      backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)",
+                      backgroundImage: "radial-gradient(circle at 2px 2px, var(--foreground) 1px, transparent 0)",
                       backgroundSize: "24px 24px",
                     }}
                   />
@@ -62,7 +62,7 @@ export function About() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                   
                   <span
-                    className="relative z-10 text-muted-foreground/30"
+                    className="relative z-10 text-muted-foreground/50 mix-blend-difference"
                     style={{
                       fontFamily: "var(--font-dm-serif)",
                       fontSize: "clamp(2rem, 4vw, 5rem)",

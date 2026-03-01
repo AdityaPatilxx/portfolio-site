@@ -3,8 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  /* Light Mode (Crisp & Clean) */
+/* Default Theme: Monochrome Light */
+:root, :root[data-theme="monochrome"] {
   --background: #fafafa;
   --foreground: #0a0a0a;
   --card: #ffffff;
@@ -25,10 +25,14 @@
   --input: #e4e4e7;
   --ring: #18181b;
   --radius: 0.5rem;
+  
+  /* Retain for project cards */
+  --theme-light: #fafafa;
+  --theme-dark: #0a0a0a;
 }
 
-.dark {
-  /* Dark Mode (Original Aesthetic) */
+/* Default Theme: Monochrome Dark */
+.dark, :root[data-theme="monochrome"].dark {
   --background: #0a0a0a;
   --foreground: #fafafa;
   --card: #111111;
@@ -48,6 +52,104 @@
   --border: #222222;
   --input: #222222;
   --ring: #444444;
+}
+
+/* Navy & Gold Theme: Light */
+:root[data-theme="navy"] {
+  --background: #F5D042;
+  --foreground: #0A174E;
+  --card: #eaca32;
+  --card-foreground: #0A174E;
+  --popover: #F5D042;
+  --popover-foreground: #0A174E;
+  --primary: #0A174E;
+  --primary-foreground: #F5D042;
+  --secondary: #dfbb33;
+  --secondary-foreground: #0A174E;
+  --muted: #dfbb33;
+  --muted-foreground: #1c2b6f;
+  --accent: #dfbb33;
+  --accent-foreground: #0A174E;
+  --destructive: #ef4444;
+  --destructive-foreground: #F5D042;
+  --border: #c8a72b;
+  --input: #c8a72b;
+  --ring: #0A174E;
+
+  --theme-light: #F5D042;
+  --theme-dark: #0A174E;
+}
+
+/* Navy & Gold Theme: Dark */
+:root[data-theme="navy"].dark {
+  --background: #0A174E;
+  --foreground: #F5D042;
+  --card: #0c1c5e;
+  --card-foreground: #F5D042;
+  --popover: #0A174E;
+  --popover-foreground: #F5D042;
+  --primary: #F5D042;
+  --primary-foreground: #0A174E;
+  --secondary: #0f247a;
+  --secondary-foreground: #F5D042;
+  --muted: #0f247a;
+  --muted-foreground: #d2b135;
+  --accent: #0f247a;
+  --accent-foreground: #F5D042;
+  --destructive: #ff4444;
+  --destructive-foreground: #F5D042;
+  --border: #142e9c;
+  --input: #142e9c;
+  --ring: #F5D042;
+}
+
+/* Teal & Cream Theme: Light */
+:root[data-theme="teal"] {
+  --background: #F0EDCC;
+  --foreground: #02343F;
+  --card: #e8e5be;
+  --card-foreground: #02343F;
+  --popover: #F0EDCC;
+  --popover-foreground: #02343F;
+  --primary: #02343F;
+  --primary-foreground: #F0EDCC;
+  --secondary: #e2dfb1;
+  --secondary-foreground: #02343F;
+  --muted: #e2dfb1;
+  --muted-foreground: #034b5a;
+  --accent: #e2dfb1;
+  --accent-foreground: #02343F;
+  --destructive: #ef4444;
+  --destructive-foreground: #F0EDCC;
+  --border: #d4d1a1;
+  --input: #d4d1a1;
+  --ring: #02343F;
+  
+  --theme-light: #F0EDCC;
+  --theme-dark: #02343F;
+}
+
+/* Teal & Cream Theme: Dark */
+:root[data-theme="teal"].dark {
+  --background: #02343F;
+  --foreground: #F0EDCC;
+  --card: #034453;
+  --card-foreground: #F0EDCC;
+  --popover: #02343F;
+  --popover-foreground: #F0EDCC;
+  --primary: #F0EDCC;
+  --primary-foreground: #02343F;
+  --secondary: #045263;
+  --secondary-foreground: #F0EDCC;
+  --muted: #045263;
+  --muted-foreground: #cfcbab;
+  --accent: #045263;
+  --accent-foreground: #F0EDCC;
+  --destructive: #ff4444;
+  --destructive-foreground: #F0EDCC;
+  --border: #06677c;
+  --input: #06677c;
+  --ring: #F0EDCC;
 }
 
 @theme inline {

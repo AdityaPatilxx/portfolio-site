@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ThemeToggle } from "./theme-toggle"
+import { ColorThemePicker } from "./color-theme-picker"
 
 const navLinks = [
   { label: "Projects", href: "#works" },
@@ -56,7 +57,10 @@ export function Navigation() {
               </a>
             ))}
             <div className="flex items-center gap-4 border-l border-border/50 pl-8 ml-4">
-              <ThemeToggle />
+              <div className="flex items-center gap-2">
+                <ColorThemePicker />
+                <ThemeToggle />
+              </div>
               <a
                 href="/resume.pdf"
                 className="group flex items-center gap-2 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:text-muted-foreground"

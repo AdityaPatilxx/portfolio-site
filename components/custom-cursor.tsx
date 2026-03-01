@@ -83,13 +83,6 @@ export function CustomCursor() {
           transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
         />
       </motion.div>
-      <style jsx global>{`
-        @media (pointer: fine) {
-          * {
-            cursor: none !important;
-          }
-        }
-      `}</style>
     </>
   )
 }

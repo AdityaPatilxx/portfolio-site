@@ -9,28 +9,32 @@ const projects = [
     category: "Fintech / Full Stack",
     year: "2026",
     description: "A real-time payment processing platform built with Next.js, Go microservices, PostgreSQL, and Stripe -- handling 500K+ transactions monthly.",
-    color: "#1a1a2e",
+    color: "linear-gradient(135deg, #1a1a2e 0%, #16222A 100%)",
+    pattern: "radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
   },
   {
     title: "CloudForge",
     category: "SaaS / DevOps Platform",
     year: "2025",
     description: "An infrastructure management dashboard with CI/CD pipelines, container orchestration, and real-time monitoring. React, Node.js, Docker, and AWS.",
-    color: "#1a2e1a",
+    color: "linear-gradient(135deg, #1a2e1a 0%, #0f2027 100%)",
+    pattern: "linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.03) 75%, transparent 75%, transparent)",
   },
   {
     title: "Artisan",
     category: "E-Commerce / API Architecture",
     year: "2025",
     description: "Headless commerce platform with a custom GraphQL API, inventory microservices, and a Next.js storefront serving 100K+ daily users.",
-    color: "#2e1a1a",
+    color: "linear-gradient(135deg, #2e1a1a 0%, #200122 100%)",
+    pattern: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px)",
   },
   {
     title: "Synapse",
     category: "AI / Real-Time App",
     year: "2024",
     description: "Collaborative AI writing tool with WebSocket-powered real-time editing, LLM integration, and a custom CRDT engine for conflict resolution.",
-    color: "#1a1a1a",
+    color: "linear-gradient(135deg, #1a1a1a 0%, #2b2b2b 100%)",
+    pattern: "radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, transparent 70%)",
   },
 ]
 
@@ -75,11 +79,19 @@ function ProjectCard({
             data-cursor="pointer"
           >
             <div
-              className="flex h-full w-full items-center justify-center"
-              style={{ backgroundColor: project.color }}
+              className="group-hover:scale-105 flex h-full w-full transform items-center justify-center transition-transform duration-1000 ease-out"
+              style={{ background: project.color }}
             >
+              {/* Pattern Overlay */}
+              <div 
+                className="absolute inset-0 mix-blend-overlay opacity-50 transition-opacity duration-1000 group-hover:opacity-100"
+                style={{
+                  backgroundImage: project.pattern,
+                  backgroundSize: index === 0 ? "20px 20px" : index === 1 ? "40px 40px" : index === 2 ? "100% 100%" : "30px 30px",
+                }}
+              />
               <span
-                className="text-foreground/20"
+                className="relative z-10 text-foreground/30 transition-all duration-700 group-hover:text-foreground/50 group-hover:scale-110"
                 style={{
                   fontFamily: "var(--font-dm-serif)",
                   fontSize: "clamp(3rem, 6vw, 8rem)",

@@ -54,12 +54,27 @@ export function Navigation() {
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-foreground transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <a
-              href="#contact"
-              className="rounded-full border border-foreground/20 px-6 py-2 font-mono text-xs tracking-widest text-foreground uppercase transition-all hover:bg-foreground hover:text-background"
-            >
-              Let&apos;s Talk
-            </a>
+            <div className="flex items-center gap-4 border-l border-border/50 pl-8 ml-4">
+              <a
+                href="/resume.pdf"
+                className="group flex items-center gap-2 font-mono text-xs tracking-widest text-foreground uppercase transition-colors hover:text-muted-foreground"
+              >
+                Resume
+                <motion.span 
+                  className="inline-block"
+                  animate={{ y: [0, 2, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  ↓
+                </motion.span>
+              </a>
+              <a
+                href="#contact"
+                className="rounded-full border border-foreground/20 bg-foreground/5 px-6 py-2 font-mono text-xs tracking-widest text-foreground uppercase transition-all hover:bg-foreground hover:text-background"
+              >
+                Let&apos;s Talk
+              </a>
+            </div>
           </div>
 
           <button

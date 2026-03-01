@@ -26,7 +26,7 @@ export function MarqueeFooter() {
           className="flex shrink-0 items-center whitespace-nowrap"
         >
           <span
-            className="text-foreground/10"
+            className="text-foreground/20"
             style={{
               fontFamily: "var(--font-dm-serif)",
               fontSize: "clamp(3rem, 8vw, 8rem)",
@@ -49,7 +49,7 @@ export function MarqueeFooter() {
           className="flex shrink-0 items-center whitespace-nowrap"
         >
           <span
-            className="text-foreground/10"
+            className="text-foreground/20"
             style={{
               fontFamily: "var(--font-dm-serif)",
               fontSize: "clamp(3rem, 8vw, 8rem)",

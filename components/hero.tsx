@@ -1,10 +1,10 @@
 "use client"
 
-import { motion, type Variants } from "framer-motion"
+import { motion } from "framer-motion"
 
 const headlineWords = ["FULL", "STACK", "DEVELOPER"]
 
-const wordVariants: Variants = {
+const wordVariants = {
   hidden: { y: "100%", opacity: 0 },
   visible: (i: number) => ({
     y: "0%",
@@ -12,7 +12,7 @@ const wordVariants: Variants = {
     transition: {
       duration: 1,
       delay: 0.8 + i * 0.15,
-      ease: [0.23, 1, 0.32, 1],
+      ease: [0.23, 1, 0.32, 1] as const,
     },
   }),
 }

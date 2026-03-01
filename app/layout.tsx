@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   title: "Alex Rivera — Creative Developer & Designer",
   description:
     "Portfolio of Alex Rivera, a creative developer and designer crafting digital experiences at the intersection of design and technology.",
-  generator: "v0.app",
   icons: {
     icon: [
       {

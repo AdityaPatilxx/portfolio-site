@@ -44,9 +44,25 @@ export function About() {
               className="relative overflow-hidden"
             >
               <motion.div style={{ y: imageY }}>
-                <div className="flex aspect-[3/4] w-full items-center justify-center bg-secondary">
+                <div 
+                  className="relative flex aspect-[3/4] w-full items-center justify-center overflow-hidden bg-secondary"
+                  style={{
+                    background: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)",
+                  }}
+                >
+                  {/* Pattern Overlay */}
+                  <div 
+                    className="absolute inset-0 mix-blend-overlay opacity-30"
+                    style={{
+                      backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)",
+                      backgroundSize: "24px 24px",
+                    }}
+                  />
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+                  
                   <span
-                    className="text-muted-foreground/30"
+                    className="relative z-10 text-muted-foreground/30"
                     style={{
                       fontFamily: "var(--font-dm-serif)",
                       fontSize: "clamp(2rem, 4vw, 5rem)",
